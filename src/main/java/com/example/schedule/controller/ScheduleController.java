@@ -82,6 +82,10 @@ public class ScheduleController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
+        if (dto.getName() == null || dto.getContents() == null || dto.getPassWord() == null){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
 
         schedule.update(dto);
 
